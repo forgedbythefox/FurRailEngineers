@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 4.0)
 project(FurRailEngineers LANGUAGES CXX)
 
 # Add GLFW as a subdirectory
-add_subdirectory(deps/glfw)
+add_subdirectory(external/glfw)
 
 # Enable C++20
 set(CMAKE_CXX_STANDARD 20)
