@@ -15,6 +15,6 @@ git submodule update --init --recursive
 ## Build
 
 ```shell 
-cmake -S . -B build
+cmake -S . -B build --fresh
 cmake --build ./build
 ```

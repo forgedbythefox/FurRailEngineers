@@ -1,8 +1,13 @@
 #include <iostream>
+#include "engine/window.h"
 
 int main()
 {
+    Engine::Window* window = new Engine::Window(100, 200, false, "Hello World");
+
     auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    std::cout << "G'day and welcome to " << lang << "!\n";
+
+    delete window;
     return 0;
 }
