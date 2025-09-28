@@ -1,15 +1,26 @@
 #pragma once
 
+#include <list>
+#include "glad/vulkan.h"
+#include "glfw3.h"
+
 namespace Engine {
     class Window {
     public:
         // Constructor
-        Window(int height, int width, bool fullscreen, const char *title);
+        Window(int width, int height, bool fullscreen, const char *title);
 
         // Destructor
         ~Window();
 
+        // Getters
+        [[nodiscard]] GLFWwindow* getGLFWWindowHandle() const
+        {
+            return windowHandle;
+        }
+
     private:
+        static std::list<Window *> windows;
         /**
          * Height of the window in pixels.
          */
@@ -26,5 +37,10 @@ namespace Engine {
          * Text to display in the title of the window.
          */
         const char *title;
+        /**
+         * Pointer to the actual window instance.
+         */
+        GLFWwindow* windowHandle;
+
     };
 }
