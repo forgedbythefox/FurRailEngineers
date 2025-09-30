@@ -11,10 +11,22 @@ git submodule update
 git submodule update --init --recursive
 ```
 
+## Code Formatting
+
+```shell
+sudo apt install clang-format
+```
+
+```shell
+./clang-format-all src
+./clang-format-all include
+```
+
 
 ## Build
 
-```shell 
+```shell
 cmake -S . -B build --fresh
 cmake --build ./build
+./build/FurRailEngineers
 ```
