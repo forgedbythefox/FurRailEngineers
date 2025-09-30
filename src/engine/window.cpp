@@ -1,13 +1,17 @@
 #include "engine/window.h"
+
 #include <iostream>
 
-std::list<Engine::Window *> Engine::Window::windows;
+std::list<Engine::Window*> Engine::Window::windows;
 
-Engine::Window::Window(const int width, const int height, const bool fullscreen, const char* title)
-    : width(width),
-      height(height),
-      fullscreen(fullscreen),
-      title(title)
+Engine::Window::Window(const int width,
+    const int height,
+    const bool fullscreen,
+    const char* title)
+    : width(width)
+    , height(height)
+    , fullscreen(fullscreen)
+    , title(title)
 {
     std::cout << "Initializing Window." << std::endl;
 
